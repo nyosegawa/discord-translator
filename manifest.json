@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Discord Translator",
+  "version": "1.0.0",
+  "description": "Auto-translate Discord messages with a multi-model Cerebras backend",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://api.cerebras.ai/*"],
+  "action": {
+    "default_popup": "src/popup/index.html"
+  },
+  "options_page": "src/options/index.html",
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/*"],
+      "js": ["src/content/index.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "public/icons/icon16.png",
+    "48": "public/icons/icon48.png",
+    "128": "public/icons/icon128.png"
+  }
+}
