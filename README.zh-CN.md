@@ -23,8 +23,6 @@
 
 ![Outgoing Translation Popup](public/screenshots/translate-outgoing.png)
 
-准备好后请替换为真实截图。
-
 ## 模型
 
 本扩展使用分层回退策略，顺序如下：

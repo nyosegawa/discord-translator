@@ -23,8 +23,6 @@
 
 ![Outgoing Translation Popup](public/screenshots/translate-outgoing.png)
 
-Замените изображения на свои скриншоты, когда будут готовы.
-
 ## Модели
 
 Используется каскадная стратегия fallback в следующем порядке:

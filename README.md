@@ -23,8 +23,6 @@ Outgoing translation popup:
 
 ![Outgoing Translation Popup](public/screenshots/translate-outgoing.png)
 
-Replace the images above with your own screenshots when ready.
-
 ## Models
 
 This extension uses a tiered model fallback strategy in this order:

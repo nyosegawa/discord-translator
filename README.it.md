@@ -23,8 +23,6 @@ Popup di traduzione in uscita:
 
 ![Outgoing Translation Popup](public/screenshots/translate-outgoing.png)
 
-Sostituisci le immagini con i tuoi screenshot quando pronti.
-
 ## Modelli
 
 Questa estensione usa una strategia di fallback a livelli in questo ordine:

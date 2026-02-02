@@ -23,8 +23,6 @@ Popup de traduction sortante:
 
 ![Outgoing Translation Popup](public/screenshots/translate-outgoing.png)
 
-Remplacez les images par vos propres captures lorsque prêt.
-
 ## Modèles
 
 Cette extension utilise une stratégie de repli par niveaux dans l’ordre suivant :

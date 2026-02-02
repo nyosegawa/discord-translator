@@ -23,8 +23,6 @@ Cerebras Inference API を利用して Discord メッセージを自動翻訳す
 
 ![Outgoing Translation Popup](public/screenshots/translate-outgoing.png)
 
-後でスクリーンショットに差し替えてください。
-
 ## 使用モデル
 
 以下の順でフォールバックする tiered モデルを使用します:

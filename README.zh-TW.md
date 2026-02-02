@@ -23,8 +23,6 @@
 
 ![Outgoing Translation Popup](public/screenshots/translate-outgoing.png)
 
-準備好後請替換為真實截圖。
-
 ## 模型
 
 本擴充功能使用分層 fallback 策略，順序如下：

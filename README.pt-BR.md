@@ -23,8 +23,6 @@ Popup de tradução para envio:
 
 ![Outgoing Translation Popup](public/screenshots/translate-outgoing.png)
 
-Substitua as imagens por suas próprias capturas quando estiver pronto.
-
 ## Modelos
 
 Esta extensão usa uma estratégia de fallback em camadas nesta ordem:

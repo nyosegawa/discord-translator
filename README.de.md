@@ -23,8 +23,6 @@ Popup für ausgehende Übersetzung:
 
 ![Outgoing Translation Popup](public/screenshots/translate-outgoing.png)
 
-Ersetze die Bilder später durch eigene Screenshots.
-
 ## Modelle
 
 Diese Erweiterung nutzt eine gestufte Fallback-Strategie in folgender Reihenfolge:

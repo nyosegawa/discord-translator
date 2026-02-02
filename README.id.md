@@ -23,8 +23,6 @@ Popup terjemahan keluar (placeholder):
 
 ![Outgoing Translation Popup](public/screenshots/translate-outgoing.png)
 
-Ganti gambar dengan screenshot milikmu saat sudah siap.
-
 ## Model
 
 Ekstensi ini menggunakan strategi fallback bertingkat dengan urutan berikut:
