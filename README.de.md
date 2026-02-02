@@ -5,6 +5,21 @@ Eine Chrome-Erweiterung, die Discord-Nachrichten automatisch mit der [Cerebras I
 **Languages:**
 [English](README.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md) | [Italiano](README.it.md) | [한국어](README.ko.md) | [中文(简体)](README.zh-CN.md) | [中文(繁體)](README.zh-TW.md) | [Русский](README.ru.md) | [Bahasa Indonesia](README.id.md)
 
+## Haftungsausschluss und Nutzungsbedingungen
+
+Dieses Projekt ist eine **clientseitige Modifikation** (Chrome-Erweiterung) und **nicht mit Discord Inc. verbunden, unterstützt oder gesponsert**.
+
+### Risikohinweis
+Die Nutzung von Drittanbieter‑Clients oder Erweiterungen, die den Discord Web Client verändern, verstößt gegen die [Discord‑Nutzungsbedingungen](https://discord.com/terms) (insbesondere zu Client‑Modifikationen und Scraping).
+- **Nutzung auf eigenes Risiko.**
+- Der Entwickler übernimmt keine Verantwortung für Sperrungen, Bans oder andere Maßnahmen durch Discord.
+
+### Datenschutz und Datenverarbeitung
+Diese Erweiterung sendet Nachrichteninhalte zur Übersetzung an die **Cerebras Inference API**.
+- **Datenfluss:** Discord Web Client -> Dein Browser -> Cerebras API -> Dein Browser.
+- **Dein API‑Key:** Der API‑Key wird lokal gespeichert (`chrome.storage.local`) und direkt an Cerebras gesendet. Er wird nicht an andere Drittanbieter‑Server gesendet.
+- **Datenschutz:** Mit der Nutzung dieser Erweiterung erklärst du dich damit einverstanden, dass sichtbarer Text von Cerebras verarbeitet werden kann. Siehe [Cerebras‑Datenschutzerklärung](https://cerebras.ai/privacy-policy).
+
 ## Funktionen
 
 - **Auto-Übersetzung eingehend:** Neue Nachrichten werden automatisch übersetzt, die neuesten zuerst.

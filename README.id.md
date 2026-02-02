@@ -5,6 +5,21 @@ Ekstensi Chrome yang menerjemahkan pesan Discord secara otomatis menggunakan [Ce
 **Languages:**
 [English](README.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md) | [Italiano](README.it.md) | [한국어](README.ko.md) | [中文(简体)](README.zh-CN.md) | [中文(繁體)](README.zh-TW.md) | [Русский](README.ru.md) | [Bahasa Indonesia](README.id.md)
 
+## Disclaimer & ketentuan penggunaan
+
+Proyek ini adalah **modifikasi sisi klien** (ekstensi Chrome) dan **tidak berafiliasi, didukung, atau disponsori** oleh Discord Inc.
+
+### Peringatan risiko
+Penggunaan klien/ekstensi pihak ketiga yang memodifikasi klien web Discord melanggar [Ketentuan Layanan Discord](https://discord.com/terms) (terutama terkait modifikasi klien dan scraping).
+- **Gunakan dengan risiko Anda sendiri.**
+- Pengembang tidak bertanggung jawab atas suspensi akun, ban, atau sanksi lain dari Discord.
+
+### Privasi & penanganan data
+Ekstensi ini mengirimkan konten pesan ke **Cerebras Inference API** untuk tujuan terjemahan.
+- **Alur data:** Discord Web Client -> Browser Anda -> Cerebras API -> Browser Anda.
+- **API Key Anda:** API Key disimpan secara lokal (`chrome.storage.local`) dan dikirim langsung ke Cerebras. Tidak dikirim ke server pihak ketiga lainnya.
+- **Privasi:** Dengan menggunakan ekstensi ini, Anda menyadari bahwa teks yang terlihat di layar dapat diproses oleh Cerebras. Lihat [Kebijakan Privasi Cerebras](https://cerebras.ai/privacy-policy).
+
 ## Fitur
 
 - **Auto‑translate pesan masuk:** Pesan baru diterjemahkan otomatis, dengan prioritas pesan terbaru.

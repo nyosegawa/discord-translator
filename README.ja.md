@@ -5,6 +5,21 @@ Cerebras Inference API を利用して Discord メッセージを自動翻訳す
 **Languages:**
 [English](README.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md) | [Italiano](README.it.md) | [한국어](README.ko.md) | [中文(简体)](README.zh-CN.md) | [中文(繁體)](README.zh-TW.md) | [Русский](README.ru.md) | [Bahasa Indonesia](README.id.md)
 
+## 免責事項・利用規約
+
+本プロジェクトは **クライアント側の改変**（Chrome 拡張）であり、Discord Inc. と提携・承認・後援関係にありません。
+
+### リスクに関する注意
+Discord の Web クライアントを改変するサードパーティ製クライアント/拡張の使用は、[Discord の利用規約](https://discord.com/terms)（クライアント改変・スクレイピングに関する条項）に抵触する可能性があります。
+- **自己責任でご利用ください。**
+- 本ツールの利用によって発生したアカウント停止・BAN 等の不利益について、開発者は一切の責任を負いません。
+
+### プライバシーとデータ取り扱い
+本拡張は翻訳のためにメッセージ内容を **Cerebras Inference API** に送信します。
+- **データフロー:** Discord Web Client -> あなたのブラウザ -> Cerebras API -> あなたのブラウザ
+- **API キー:** API キーはローカル（`chrome.storage.local`）に保存され、Cerebras へ直接送信されます。他の第三者サーバーには送信されません。
+- **プライバシー:** 本拡張を利用することで、画面上に表示されるテキストが Cerebras によって処理される可能性があることに同意したものとみなされます。詳細は [Cerebras のプライバシーポリシー](https://cerebras.ai/privacy-policy) をご確認ください。
+
 ## 特徴
 
 - **受信メッセージ自動翻訳:** 最新の投稿を優先して自動翻訳します。

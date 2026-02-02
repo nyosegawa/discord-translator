@@ -5,6 +5,21 @@ Uma extensão do Chrome que traduz automaticamente mensagens do Discord usando a
 **Languages:**
 [English](README.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md) | [Italiano](README.it.md) | [한국어](README.ko.md) | [中文(简体)](README.zh-CN.md) | [中文(繁體)](README.zh-TW.md) | [Русский](README.ru.md) | [Bahasa Indonesia](README.id.md)
 
+## Aviso legal e termos de uso
+
+Este projeto é uma **modificação do lado do cliente** (extensão do Chrome) e **não é afiliado, endossado ou patrocinado** pela Discord Inc.
+
+### Aviso de risco
+O uso de clientes ou extensões de terceiros que modificam o cliente web do Discord viola os [Termos de Serviço do Discord](https://discord.com/terms) (especialmente sobre modificações do cliente e scraping).
+- **Use por sua conta e risco.**
+- O desenvolvedor não se responsabiliza por suspensões, banimentos ou outras penalidades ao usar esta ferramenta.
+
+### Privacidade e tratamento de dados
+Esta extensão envia o conteúdo das mensagens para a **Cerebras Inference API** para tradução.
+- **Fluxo de dados:** Discord Web Client -> Seu navegador -> Cerebras API -> Seu navegador.
+- **Sua API Key:** A API Key é armazenada localmente (`chrome.storage.local`) e enviada diretamente à Cerebras. Não é enviada para outros servidores de terceiros.
+- **Privacidade:** Ao usar esta extensão, você reconhece que o texto visível na tela pode ser processado pela Cerebras. Consulte a [Política de Privacidade da Cerebras](https://cerebras.ai/privacy-policy).
+
 ## Recursos
 
 - **Auto‑tradução de mensagens recebidas:** Novas mensagens são traduzidas automaticamente, priorizando as mais recentes.

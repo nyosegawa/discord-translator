@@ -5,6 +5,21 @@
 **Languages:**
 [English](README.md) | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Português (BR)](README.pt-BR.md) | [Italiano](README.it.md) | [한국어](README.ko.md) | [中文(简体)](README.zh-CN.md) | [中文(繁體)](README.zh-TW.md) | [Русский](README.ru.md) | [Bahasa Indonesia](README.id.md)
 
+## 免責聲明與使用條款
+
+本專案為 **用戶端側修改**（Chrome 擴充），**未與 Discord Inc. 合作、認可或贊助**。
+
+### 風險提示
+使用修改 Discord Web 用戶端的第三方客戶端或擴充，可能違反 [Discord 服務條款](https://discord.com/terms)（特別是關於用戶端修改與爬蟲的條款）。
+- **使用風險自負。**
+- 使用本工具造成的停權、封鎖或其他處分，開發者不負任何責任。
+
+### 隱私與資料處理
+本擴充會將訊息內容傳送至 **Cerebras Inference API** 進行翻譯。
+- **資料流:** Discord Web Client -> 你的瀏覽器 -> Cerebras API -> 你的瀏覽器。
+- **API Key:** API Key 只保存在本機（`chrome.storage.local`），並直接送至 Cerebras，不會送至其他第三方伺服器。
+- **隱私:** 使用本擴充表示你同意螢幕上可見文字可能會由 Cerebras 處理。詳情請參閱 [Cerebras 隱私權政策](https://cerebras.ai/privacy-policy)。
+
 ## 功能
 
 - **收件自動翻譯：** 新訊息會自動翻譯，並優先處理最新訊息。
