@@ -108,6 +108,14 @@ describe('translation UI helpers', () => {
     expect(el.getAttribute(DISCORD_SELECTORS.TRANSLATED_ATTR)).toBe('true')
   })
 
+  it('updateTranslation adds the AI Translation label', () => {
+    const el = createMessage()
+    injectLoading(el)
+    updateTranslation(el, 'translated')
+    const container = el.querySelector(`.${DISCORD_SELECTORS.TRANSLATION_CONTAINER_CLASS}`)
+    expect(container?.textContent).toContain('AI Translation')
+  })
+
   it('removeTranslation removes the container', () => {
     const el = createMessage()
     injectLoading(el)
