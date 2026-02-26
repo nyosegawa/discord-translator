@@ -187,3 +187,21 @@ describe('storage.setCache', () => {
     expect(set).toHaveBeenCalledWith({ tr_id-1: value })
   })
 })
+
+describe('storage.clearCache', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
+  it('removes only cache keys with tr_ prefix', async () => {
+    const { remove } = installChromeStorageMock({
+      tr_a: { translated: '1' },
+      tr_b: { translated: '2' },
+      settings: { targetLang: 'Japanese' }
+    })
+
+    await storage.clearCache()
+
+    expect(remove).toHaveBeenCalledWith(['tr_a', 'tr_b'])
+  })
+})
