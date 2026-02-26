@@ -220,6 +220,24 @@ describe('storage.setCache', () => {
 
     expect(set).toHaveBeenCalledWith({ tr_id-1: value })
   })
+
+  it('overwrites existing cache entry for the same key', async () => {
+    const { store } = installChromeStorageMock({
+      tr_key: { original: 'old', translated: 'old', timestamp: 1 }
+    })
+
+    await storage.setCache('key', {
+      original: 'new',
+      translated: 'new',
+      timestamp: 2
+    })
+
+    expect(store.tr_key).toEqual({
+      original: 'new',
+      translated: 'new',
+      timestamp: 2
+    })
+  })
 })
 
 describe('storage.clearCache', () => {
