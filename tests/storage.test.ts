@@ -144,6 +144,19 @@ describe('storage.getStats', () => {
       lastResetDate: '2025-12'
     })
   })
+
+  it('reads stats using the stats key', async () => {
+    const { get } = installChromeStorageMock({
+      stats: {
+        totalTranslatedCount: 1,
+        lastResetDate: '2026-02'
+      }
+    })
+
+    await storage.getStats()
+
+    expect(get).toHaveBeenCalledWith('stats')
+  })
 })
 
 describe('storage.saveStats', () => {
