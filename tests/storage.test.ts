@@ -152,3 +152,15 @@ describe('storage.saveStats', () => {
     expect(set).toHaveBeenCalledWith({ stats })
   })
 })
+
+describe('storage.getCache', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
+  it('returns null when cache key is missing', async () => {
+    installChromeStorageMock()
+
+    await expect(storage.getCache('m1')).resolves.toBeNull()
+  })
+})
