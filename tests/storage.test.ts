@@ -163,6 +163,14 @@ describe('storage.getCache', () => {
 
     await expect(storage.getCache('m1')).resolves.toBeNull()
   })
+
+  it('reads cache entry from tr_ prefixed key', async () => {
+    const entry = { original: 'x', translated: 'y', timestamp: 99 }
+    const { get } = installChromeStorageMock({ tr_msg123: entry })
+
+    await expect(storage.getCache('msg123')).resolves.toEqual(entry)
+    expect(get).toHaveBeenCalledWith('tr_msg123')
+  })
 })
 
 describe('storage.setCache', () => {
