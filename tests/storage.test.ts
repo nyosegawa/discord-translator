@@ -68,3 +68,22 @@ describe('storage.getSettings', () => {
     })
   })
 })
+
+describe('storage.saveSettings', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
+  it('persists new values merged with defaults', async () => {
+    const { set } = installChromeStorageMock()
+
+    await storage.saveSettings({ targetLang: 'German' })
+
+    expect(set).toHaveBeenCalledWith({
+      settings: {
+        ...DEFAULT_SETTINGS,
+        targetLang: 'German'
+      }
+    })
+  })
+})
