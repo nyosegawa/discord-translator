@@ -89,6 +89,15 @@ describe('translation UI helpers', () => {
     expect(containers.length).toBe(1)
   })
 
+  it('injectLoading appends animation style element only once', () => {
+    const first = createMessage()
+    const second = createMessage()
+    injectLoading(first)
+    injectLoading(second)
+    const styles = document.querySelectorAll('#cerebras-style')
+    expect(styles.length).toBe(1)
+  })
+
   it('updateTranslation sets translated text and marks element', () => {
     const el = createMessage()
     injectLoading(el)
