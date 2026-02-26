@@ -164,3 +164,18 @@ describe('storage.getCache', () => {
     await expect(storage.getCache('m1')).resolves.toBeNull()
   })
 })
+
+describe('storage.setCache', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
+  it('stores cache entry under tr_ prefixed key', async () => {
+    const { set } = installChromeStorageMock()
+    const value = { original: 'a', translated: 'b', timestamp: 1 }
+
+    await storage.setCache('id-1', value)
+
+    expect(set).toHaveBeenCalledWith({ tr_id-1: value })
+  })
+})
