@@ -67,6 +67,14 @@ describe('storage.getSettings', () => {
       sourceLang: 'English'
     })
   })
+
+  it('reads settings using the settings key', async () => {
+    const { get } = installChromeStorageMock({ settings: {} })
+
+    await storage.getSettings()
+
+    expect(get).toHaveBeenCalledWith('settings')
+  })
 })
 
 describe('storage.saveSettings', () => {
