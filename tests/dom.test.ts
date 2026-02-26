@@ -114,4 +114,10 @@ describe('translation UI helpers', () => {
     expect(container).toBeTruthy()
     expect(container?.textContent).toContain('hello')
   })
+
+  it('updateTranslation is a no-op when container does not exist', () => {
+    const el = createMessage()
+    expect(() => updateTranslation(el, 'hello')).not.toThrow()
+    expect(el.getAttribute(DISCORD_SELECTORS.TRANSLATED_ATTR)).toBeNull()
+  })
 })
