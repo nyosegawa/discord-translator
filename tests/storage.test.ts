@@ -52,4 +52,19 @@ describe('storage.getSettings', () => {
 
     await expect(storage.getSettings()).resolves.toEqual(DEFAULT_SETTINGS)
   })
+
+  it('merges stored settings into defaults', async () => {
+    installChromeStorageMock({
+      settings: {
+        targetLang: 'French',
+        sourceLang: 'English'
+      }
+    })
+
+    await expect(storage.getSettings()).resolves.toEqual({
+      ...DEFAULT_SETTINGS,
+      targetLang: 'French',
+      sourceLang: 'English'
+    })
+  })
 })
