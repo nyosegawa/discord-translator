@@ -69,6 +69,11 @@ describe('shouldTranslate', () => {
     const el = createMessage()
     expect(shouldTranslate('look https://example.com now', el)).toBe(true)
   })
+
+  it('returns true for long token text without spaces', () => {
+    const el = createMessage()
+    expect(shouldTranslate('averylongsinglewordtokenwithmorethan25chars', el)).toBe(true)
+  })
 })
 
 describe('translation UI helpers', () => {
