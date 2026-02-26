@@ -64,6 +64,11 @@ describe('shouldTranslate', () => {
     const el = createMessage()
     expect(shouldTranslate('hello there', el)).toBe(true)
   })
+
+  it('returns true when URL is mixed with normal sentence', () => {
+    const el = createMessage()
+    expect(shouldTranslate('look https://example.com now', el)).toBe(true)
+  })
 })
 
 describe('translation UI helpers', () => {
