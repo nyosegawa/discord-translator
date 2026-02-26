@@ -113,7 +113,8 @@ describe('translation UI helpers', () => {
     injectLoading(el)
     updateTranslation(el, 'translated')
     const container = el.querySelector(`.${DISCORD_SELECTORS.TRANSLATION_CONTAINER_CLASS}`)
-    expect(container?.textContent).toContain('AI Translation')
+    const label = container?.querySelector('span')
+    expect(label?.innerText).toBe('AI Translation')
   })
 
   it('removeTranslation removes the container', () => {
