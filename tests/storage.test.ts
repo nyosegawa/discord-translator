@@ -86,4 +86,24 @@ describe('storage.saveSettings', () => {
       }
     })
   })
+
+  it('keeps existing stored values that are not overwritten', async () => {
+    const { set } = installChromeStorageMock({
+      settings: {
+        apiKey: 'abc',
+        targetLang: 'Spanish'
+      }
+    })
+
+    await storage.saveSettings({ outgoingLang: 'Japanese' })
+
+    expect(set).toHaveBeenCalledWith({
+      settings: {
+        ...DEFAULT_SETTINGS,
+        apiKey: 'abc',
+        targetLang: 'Spanish',
+        outgoingLang: 'Japanese'
+      }
+    })
+  })
 })
