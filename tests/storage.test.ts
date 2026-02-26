@@ -114,6 +114,19 @@ describe('storage.saveSettings', () => {
       }
     })
   })
+
+  it('can persist false boolean values', async () => {
+    const { set } = installChromeStorageMock()
+
+    await storage.saveSettings({ isEnabled: false })
+
+    expect(set).toHaveBeenCalledWith({
+      settings: {
+        ...DEFAULT_SETTINGS,
+        isEnabled: false
+      }
+    })
+  })
 })
 
 describe('storage.getStats', () => {
