@@ -218,7 +218,7 @@ describe('storage.setCache', () => {
 
     await storage.setCache('id-1', value)
 
-    expect(set).toHaveBeenCalledWith({ tr_id-1: value })
+    expect(set).toHaveBeenCalledWith({ 'tr_id-1': value })
   })
 
   it('overwrites existing cache entry for the same key', async () => {
