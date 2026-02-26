@@ -204,4 +204,15 @@ describe('storage.clearCache', () => {
 
     expect(remove).toHaveBeenCalledWith(['tr_a', 'tr_b'])
   })
+
+  it('calls remove with an empty list when no cache keys exist', async () => {
+    const { remove } = installChromeStorageMock({
+      settings: { apiKey: 'k' },
+      stats: { totalTranslatedCount: 3, lastResetDate: '2026-02' }
+    })
+
+    await storage.clearCache()
+
+    expect(remove).toHaveBeenCalledWith([])
+  })
 })
