@@ -137,3 +137,18 @@ describe('storage.getStats', () => {
     })
   })
 })
+
+describe('storage.saveStats', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
+  it('writes stats into local storage', async () => {
+    const { set } = installChromeStorageMock()
+    const stats = { totalTranslatedCount: 10, lastResetDate: '2026-01' }
+
+    await storage.saveStats(stats)
+
+    expect(set).toHaveBeenCalledWith({ stats })
+  })
+})
