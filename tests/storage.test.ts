@@ -107,3 +107,19 @@ describe('storage.saveSettings', () => {
     })
   })
 })
+
+describe('storage.getStats', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
+  it('returns monthly defaults when stats are missing', async () => {
+    installChromeStorageMock()
+    const expectedMonth = new Date().toISOString().slice(0, 7)
+
+    await expect(storage.getStats()).resolves.toEqual({
+      totalTranslatedCount: 0,
+      lastResetDate: expectedMonth
+    })
+  })
+})
